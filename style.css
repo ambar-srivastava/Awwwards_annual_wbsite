@@ -1,0 +1,505 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Steinbeck";
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#background{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#back{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.267);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: fixed;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 22;
+}
+
+nav #left a{
+    color: #fff;
+    text-decoration: none;
+    margin-right: 30px;
+    margin-left: 10px;
+}
+
+nav #left a i{
+    position: absolute;
+    top: 53%;
+    transform: translateY(-50%);
+    left: 22px;
+}
+
+nav #mid{
+    position: absolute;
+    left: 50%;
+    cursor: pointer;
+    transform: translateX(-50%);
+}
+
+nav #right a{
+    margin-left: 40px;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav #right a:nth-child(1){
+    text-transform: initial;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    font-size: 11px;
+    opacity: .6;
+}
+
+canvas{
+    width: 100%;
+}
+
+#overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    pointer-events: none;
+    text-align: center;
+}
+
+#overlay h1{
+    font-family: "Love";
+    word-spacing: 15px;
+    color: #fff;
+    margin-top: 65px;
+    font-size: 105px;
+    font-weight: 100;
+    /* text-transform: lowercase; */
+    line-height: 85px;
+    font-feature-settings: "ss02" on,"ss03" on;
+}
+
+#overlay span{
+    color: red;
+    font-size: 60px;
+    font-weight: 100;
+}
+
+#overlay h2{
+    color: #fff;
+    opacity: .5;
+    font-size: 16px;
+    font-weight: lighter;
+    margin-top: 40px;
+    line-height: 22px;
+}
+
+#overlay #gola{
+    pointer-events: initial;
+    margin-top: 40px;
+    width: 140px;
+    height: 140px;
+    /* background-color: #fff; */
+    background-image: url(./Images/Circle.d322cb2.svg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* animation: spin 10s infinite cubic-bezier(0.19, 1, 0.22, 1) linear both; */
+    animation: spin 9s linear infinite;
+    cursor: pointer;
+}
+
+#gola #circ{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#gola:hover #circ{
+    background-image: url(./Images/full_hero.a083b77.png);
+    background-position: top right;
+    background-size: 500% 500%;
+    transition: .7s all;
+    transform: translate(-50%, -50%) scale(3);
+}
+
+#about{
+    width: 100%;
+    height: 185vh;
+    /* background-color: aqua; */
+    /* position: relative; */
+}
+
+#abtcont{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+}
+
+#abttext{
+    width: 59%;
+    /* height: 55%; */
+    /* background-color: rgb(109, 134, 126); */
+    margin-top: 150px;
+    font-feature-settings: "ss02" on,"ss03" on;
+    margin-right: 70px;
+}
+
+#abttext h1{
+    font-family: "Love";
+    font-size: 93px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-end;
+    line-height: 90px;
+}
+
+#abttext #one{
+    margin-right: 5px;
+}
+
+#abttext #two{
+    align-items: flex-start;
+    margin-left: 5px;
+}
+
+#abttext #three{
+    margin-right: 65px;
+}
+
+#abtcont .content{
+    background-image: url(./Images/full_hero.a083b77.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#abtcont #cont1{
+    position: absolute;
+    top: 25%;
+    left: 20px;
+    width: 260px;
+    height: 60px;
+    background-position: bottom;
+}
+
+#abtcont #cont2{
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    width: 380px;
+    height: 70px;
+    background-position: center;
+}
+
+#abtcont video{
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 20%;
+}
+
+#abtcont2{
+    width: 100%;
+    height: 85vh;
+    /* background-color: gold; */
+    display: flex;
+    /* position: absolute; */
+    /* top: 100%; */
+    /* bottom: 0; */
+}
+
+#abtleft{
+    width: 50%;
+    height: 100vh;
+    background-color: #000;
+    padding: 60px 20px;
+    position: relative;
+}
+
+#abtleft p{
+    font-size: 26px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+#abtleft #leftcont{
+    background-image: url(./Images/full_hero.a083b77.png);
+    background-attachment: fixed;
+    background-size: 150% 150%;
+    background-position: center;
+    width: 370px;
+    height: 120px;
+    position: absolute;
+    top: 53%;
+    right: 20%;
+}
+
+#abtright{
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#righttext{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+#righttext p{
+    /* margin-top: 20px; */
+    width: 47%;
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 18px;
+    color: #fff;
+    opacity: .5;
+}
+
+#righttext p:nth-child(2){
+    margin-bottom: 20px;
+    /* color: aquamarine; */
+}
+
+#righttext p:nth-child(3){
+    margin-top: -60px;
+}
+
+#halloffame{
+    width: 100%;
+    min-height: 100vh;
+    background-color: burlywood;
+}
+
+#halloffame #first{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#halloffame #first img{
+    margin-top: 100px;
+}
+
+#halloffame #first h5{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#halloffame #first h1{
+    color: #fff;
+    font-family: "love";
+    font-size: 80px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+#first #firsttxt{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+    margin-top: 40px;
+}
+
+#first #firsttxt p{
+    width: 40%;
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 17px;
+    opacity: .5;
+}
+
+#second{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #54323d;
+    display: flex;
+    flex-direction: column;
+    /* overflow: auto; */
+}
+
+.grids {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+}
+  
+.grid1 {
+    width: 40%;
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff;
+    /* background-color: red; */
+}
+  
+.grid2 {
+    width: 40%;
+    min-height: 100vh;
+    color: #fff;
+    padding: 20px;
+}
+  
+.grid3 {
+    width: 20%;
+    min-height: 100vh;
+    color: #fff;
+    padding: 20px;
+}
+  
+.grid3 h1 {
+    font-size: 60px;
+    font-family: "Love";
+    text-transform: uppercase;
+    text-align: center;
+}
+  
+.grid2 .post.post {
+    margin-top: 150px;
+}
+  
+.post {
+    margin-top: 150px;
+}
+  
+.post:nth-child(1) {
+    margin-top: 80px;
+}
+  
+.post .txt {
+    display: flex;
+    align-items: flex-start;
+    /* background-color: red; */
+}
+  
+.post .txt h1 {
+    font-weight: 100;
+    font-size: 27px;
+}
+  
+.post .txt small {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 10px;
+    font-family: "Consolas";
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+  
+.pimg {
+    width: 100%;
+    height: 270px;
+    margin: 30px 0;
+    /* background-color: red; */
+}
+
+.pimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.btmtxt h1 {
+    font-size: 26px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+  
+.btmtxt p {
+    opacity: 0.6;
+    font-size: 12px;
+}
+  
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: grey;
+    margin-top: 30px;
+}
+
+
+#credits{
+    width: 100%;
+    height: 49%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#credits p{
+    color: rgba(255, 255, 255, 0.459);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+#credits p span{
+    color: #ef3c33c7;
+}
+
+
+@keyframes spin { 
+    from { 
+        transform: translateX(-50%) rotate(0deg); 
+    } to { 
+        transform: translateX(-50%) rotate(360deg); 
+    }
+}
